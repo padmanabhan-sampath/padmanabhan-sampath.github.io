@@ -20,7 +20,7 @@ def print_hi(name)
 end
 print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
-print_hi('TJerry')
+print_hi('Jerry')
 #=> prints 'Hi, Jerry' to STDOUT.
 
 {% endhighlight %}
