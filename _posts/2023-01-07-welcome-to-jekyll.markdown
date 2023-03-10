@@ -22,6 +22,8 @@ print_hi('Tom')
 #=> prints 'Hi, Tom' to STDOUT.
 print_hi('Jerry')
 #=> prints 'Hi, Jerry' to STDOUT.
+print_hi('Bugs')
+#=> prints 'Hi, Bugs' to STDOUT.
 
 {% endhighlight %}
 
