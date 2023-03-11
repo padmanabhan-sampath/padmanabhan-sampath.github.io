@@ -1,0 +1,30 @@
+---
+layout: post
+title:  "ISS SSTV reception"
+excerpt: "A simple guide for receiving SSTV images from ISS using handheld radio and an android phone"
+date:   2023-01-08 19:59:55 +0800
+categories: jekyll update
+---
+
+
+2023-March-10 Update: The ISS SSTV system is currently not functional due to a hardware failure. The replacement is scheduled around summer of 2023. Source: [ARISS SSTV Blogspot][ariss-sstv-blogspot]
+
+
+<img src="/assets/2023_01_iss_sstv/iss_sstv_image.png" width="100%" />
+
+* TOC
+{:toc}
+
+# Quick overview
+
+
+
+# Setup and tests
+
+# Results
+
+# References
+
+[ariss-sstv-blogspot]: http://ariss-sstv.blogspot.com/
+[ariss-iss-current-status]: https://www.ariss.org/current-status-of-iss-stations.html
+[ariss]: https://www.ariss.org/
