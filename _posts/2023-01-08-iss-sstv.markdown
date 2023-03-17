@@ -10,6 +10,14 @@ categories: jekyll update
 2023-March-10 Update: The ISS SSTV system is currently not functional due to a hardware failure. The replacement is scheduled around summer of 2023. Source: [ARISS SSTV Blogspot][ariss-sstv-blogspot]
 
 
+The contribution or value
+1. simple hardware setup
+2. practical advice, with the nitty gritty details
+3. ability to extend further
+
+> most tutorials online are bloated, pointing at various other 
+
+
 <img src="/assets/2023_01_iss_sstv/iss_sstv_image.png" width="100%" />
 
 * TOC
@@ -17,9 +25,15 @@ categories: jekyll update
 
 # Quick overview
 
-
-
 # Setup and tests
+
+1. Basic setup
+    1. Pass prediction
+    2. Hardware RF test
+    3. Day 0
+       1. Status checks: ARISS, blogsite, sat status by ppl, 
+
+2. Extended setup
 
 # Results
 
