@@ -1,229 +1,221 @@
 ---
 layout: post
 title:  "ISS SSTV reception"
-excerpt: "A simple guide for receiving SSTV images from ISS using handheld radio and an android phone"
+excerpt: "A guide for receiving SSTV images from ISS using minimal setup: handheld radio and an android phone"
 date:   2023-01-08 19:59:55 +0800
 categories: jekyll update
 ---
 
 
-> 2023-March-10 Update: The ISS SSTV system is currently not functional due to a hardware failure. The replacement is scheduled around summer of 2023. Source: [ARISS SSTV Blogspot][ariss-sstv-blogspot]
+> 2023-March-25 Update: The ISS SSTV system is currently not functional due to a hardware failure. The replacement is scheduled around summer of 2023. Source: [ARISS SSTV Blogspot][ariss-sstv-blogspot]
 
+
+<!---
+comments syntax
 [comment]: #  this is a comment
 
-What are the contributions of this document?
+**What are the contributions of this document?**
 
 1. Utilizes a simple hardware setup
-2. Provides detailed effective practical instructions
-3. Also provides an extension to the idea
-4. Focuses on homebrew setup - easy to build
+2. Provides detailed practical instructions
 
-What about existing articles on this topic?
+**What about existing articles on this topic?**
 
-1. 
+1. Most online tutorials are bloated, pointing at other resources
+2. No detailed Step by step guide with personal tips + encounters
+
+<p float="centre">
+  <img src="/assets/2023_01_iss_sstv/iss_eareth.png" width="40%" />
+  <img src="/assets/2023_01_iss_sstv/sstv_sameple.gif" width="40%" /> 
+</p>
+
+--->
 
 
-most tutorials online are bloated, pointing at various other 
 
 
-<img src="/assets/2023_01_iss_sstv/iss_sstv_image.png" width="100%" />
+
+The [International Space Station (ISS)](https://www.amsat.org/amateur-radio-on-the-iss/) occasionally transmits images through the onboard amateur radio which can be received by amateur radio operators. These images are encoded and transmitted via audio tones using a transmission scheme know as [Slow-scan television (SSTV)](https://en.wikipedia.org/wiki/Slow-scan_television). 
+
+You can browse through the gallery images here [ARISS SSTV gallery][sstv-gallery].
+
+
+<img src="/assets/2023_01_iss_sstv/iss_earth_sstv_image.png" width="100%" />
+
+
+
+These images can be received and decoded live just by using a handheld VHF radio and an android phone. It's incredible to know that we can receive an image directly from a satellite orbiting at 400 km altitude in space.
+
+This post provides brief instructions on receiving SSTV images form ISS using a minimal setup.
 
 * TOC
 {:toc}
 
-# ISS SSTV
 
 
---the 
-
-The International Space Station (ISS) houses Amateur Radio equipment and most astronauts onboard poses amateur radio license. Apart from the usual voice communication, the ISS operates as 
-
-1. Voice radio repeater (Uplink: 145.99 MHz Downlink: 437.8 MHz)
-2. Packet radio repeater (145.825 MHz)
-3. SSTV transmitter (145.5 MHz)
-
-For most of the time the cross-band repeater and/or digital (APRS) repeater are in operation. This will be disabled for the occacional School contacts outreach program, EVA missions or other reasons
-
-The SSTV (Slow Scan Television) is a protocol for transmission of images encoded as audio tones via RF. SSTV transmissions from ISS are conducted few times a year either by ARISS or MAI. The SSTV radio hardware is housed in the Russian segment of the ISS. 
-
-The MAI, Russian Space Administration occationally conducts experiments through SSTV transmission from the ISS which can be received by anyone with receiver cable of tuning to SSTV frequency 145.5 MHz. The images transmissted usually are related some significance to space exploration.
-
-It is awe inspiring to know that you can receive an image directly from a satellite orbiting the Earth at ~400 KM height. And all this can be achieved with minimal handheld transceiver and an android phone.
-
-This blog post provides brief instructions on receving SSTV images form ISS using two setup: 1) bare bones 2) a slightly better setup.
-
-<img src="/assets/2023_01_iss_sstv/sstv_sample.gif" width="60%" class="center" />
-
-<p float="centre">
-  <img src="/assets/2023_01_iss_sstv/20201129_164612.jpg" width="40%" />
-  <img src="/assets/2023_01_iss_sstv/robot32_sstv_sample.gif" width="40%" /> 
-</p>
+<img id="sstv_sample" src="/assets/2023_01_iss_sstv/sstv_sample.gif" width="60%" class="center" />
+<style type="text/css">
+    #sstv_sample {
+        display: block;
+        margin-left: auto;
+        margin-right: auto }
+</style>
 
 
-
-# Quick overview
+# Quick reference sheet
 
 * Radio settings
-  * VFO frequency: 145.50 MHz
+  * VFO frequency: 145.800 MHz
   * Squelch: lowest
   * Volume: 50% ( make sure it does not saturate phone's audio input)
-* Robot36 App
-  * Decoding: Auto or PD120
+* Android apps
+  * [Robot36 App][robot36-playstore]
+    * Decoding: Auto or PD120
+  * [Heavens-Above App][heavens-above-app]
 * ISS status check
-  * SSTV Blogspot
-  * ARISS ISS Live status
-  * ARISS ISS status
+   1. [ARISS SSTV Blogspot][ariss-sstv-blogspot]
+   2. [ARISS current status page][ariss-iss-current-status]
+   3. [AMSAT Live status page][amsat-status]: For SSTV transmissions look under ISS-DATV.
 
 
-1. Basic setup
-    1. Pass prediction
-    2. Hardware RF test
-    3. Day 0
-       1. Status checks: ARISS, blogsite, sat status by ppl, 
+# Hardware needed
+1. VHF Amateur Radio with Rubber ducky or whip or a 5/8 antenna
+2. Android phone with these apps installed
+   - [Robot36][robot36-playstore]: for SSTV audio decoding 
+   -  [Heavens-Above][heavens-above-app]: predict ISS pass and live tracking
 
-2. Extended setup
-   1. Same as the basic setup with two key additions
-      1. Use a directional antenna ( 3 element Yagi)
-      2. Directly feed the radio's audio through phone's mic in
-    why: elminates external noise
-
-# Basic Setup
-
-Hardware needed
-1. VHF Amateur Radio with Rubber ducky/ whip / 5/8 antenna
-2. Android phone with Robot36 app installed
+<img id="sstv_sample" src="/assets/2023_01_iss_sstv/minimal_setup.png" width="100%" class="center" />
   
+
+
 ## Step 1: Pass selection
 
-1. **Transmission window:** Identify the SSTV transmission window from [ARISS SSTV Blogspot][ariss-sstv-blogspot]
-   - Note that the date and time are with respect to UTC time. Convert it to reflect your location timezone <br>
-<br>
-<br>
-<br>
+I will use the [2021 MAI-75 SSTV June 9 and 10](http://ariss-sstv.blogspot.com/2021/05/mai-75-sstv-june-9-and-10.html?m=1) SSTV transmission as an example to walk through the process.
 
-2. **Location passes:** Use [Heavens-Above webpage][heavens-above-web] or [Heavens-Above android app][heavens-above-app] to identify the ISS passes over your location during the SSTV transmission window
-   - By default only visible passes would be listed. Make sure you select "all" passes\
-<br>
-<br>
-<br>
+**1. Transmission window:**<br>
+   Identify the SSTV transmission window from [ARISS SSTV Blogspot][ariss-sstv-blogspot]
+   - Note that the date and time are with respect to UTC timezone. Convert it to reflect your local timezone. Here I have converted to Singapore time (SGT)
 
-3. **Pass downselection:**After you have identified the potential passes during the transmission window, you would need to down select the ones most suited for your position
-   - Ideally passes should have high elevation; this provides a clear line of sight to the satellite and provides enough time to receive the image
-   - Pass duration > 5 minutes
-   - Each image transmission lasts for 2 minutes followed by a 2 min cool off period. So having a 5 min window increases the chances of receiving the whole image
-   - I have received images with low elevation, ~ 2 minute passes as well. But the trick is to choose a location with a clear view of the horizon, which is not obstructed by buildings
-<br>
-<br>
-<br>
+<img id="june_9_10_sstv_utc_sgt" src="/assets/2023_01_iss_sstv/june_9_10_sstv_utc_sgt.png" width="60%" class="center" />
+<style type="text/css">
+    #june_9_10_sstv_utc_sgt {
+        display: block;
+        margin-left: auto;
+        margin-right: auto }
+</style>
 
-1. **Location selection**: Select passes which provides direct line of sight visibility, which are not obastructed by buildings for most of the pass duration, ideally with clear view of the horizon
-   -  The heavens above mobile app have a live tracking feature where it can show the orientation of the ISS along the pass
-   -  If you have mulitple location options use this feature to do some scouting and assess the pass prior to the reception date
-   -  I have identified a couple of location spots and choose between them depending on where I am location (home/office) and pass orientation (where is raises and sets, and direction).
+**2. Location specific passes:**<br>
+   Use [Heavens-Above webpage][heavens-above-web] or [Heavens-Above android app][heavens-above-app] to identify the ISS passes over your location during the SSTV transmission window
+   - By default only visible passes would be listed. Make sure you select "all" passes. In the Heavens-above app, make sure you can enter your location and check "Treat the ISS as  a radio satellite" under the settings menu.<br><br>
+   - In the pass listing below, I have highlighted the passes which overlap with the transmission window
 
 
-Pointers:
-- Sometime the ISS would be through mid-transmission as it emerges through the horizon
-- The ISS stays radio visible for longer duration as it approaches the horizon, so if you have a directional antenna, you would be able to pickup weaker signals and increase your chances of making contact
+
+<img id="heavens_above_june9_10_sg_passes" src="/assets/2023_01_iss_sstv/heavens_above_june9_10_sg_passes.png" width="100%" class="center" />
+<style type="text/css">
+    #heavens_above_june9_10_sg_passes {
+        display: block;
+        margin-left: auto;
+        margin-right: auto }
+</style>
+
+
+
+**3. Pass downselection:**<br>
+   After you have identified the potential passes during the transmission window, you would need to down select the ones most suited for your position
+   - Select passes with duration > 5 minutes or one with high elevation
+     - Ideally passes should have high elevation; this provides a clear line of sight to the satellite<br><br>
+   - Each image transmission lasts for 2 minutes followed by a 2 min cool off period. So having a 5 min window increases the chances of receiving the whole image<br><br>
+   - I have received images with low elevation, ~ 2 minute passes as well. But the trick is to choose a location with a clear view of the horizon<br><br>
+
+<figure>
+  <img src="/assets/2023_01_iss_sstv/heavens_ab_iss_elev.png" width="100%" />
+   <figcaption> I have chosen three passes to show the amount of time ISS is exposed with respect to different elevations.</figcaption>
+</figure>
+
+   -  The heavens above mobile app has a live tracking feature where it can show the orientation of the ISS along the pass<br><br>
+
+   - Select passes which maximizes the duration of direct line of sight visibility, ideally with clear view of the horizon<br><br>
+
+   -  I have identified a couple of location spots and choose between them depending on my occupancy (home/office) and pass orientation (where ISS raises, sets, and the elevation)<br><br>
+   -  These spots will also be helpful for other ISS amateur radio activities such as voice cross band repeater and APRS packet repeater<br><br>
+
 
 ## Step 2: Signal chain test
 
-The next step is to make sure we can receive the image.
+In this step we test out the reception and image decoding process.
 
 1. Radio settings
-   - 145.50 MHz
-   - Wideband (12.5 / 25 KHz) - if available in HT settings
-   - Squelch at lowest (just above noise threshold)
-     - ISS puts out a strong signal transmitting at 25W !, so it can easibly break through the squelch level
+   - VFO: 145.800 MHz
+   - Squelch at the lowest (just above noise threshold)
+     - ISS transmits at high power of 25 watts, so it can easily break through the squelch level
 <br>
 <br>
-<br>
-2. Android App: Robot36
+1. Android App: [Robot36][robot36-playstore]
    - this is a neat little app which decodes the SSTV live.
    - Features
      - Automatically detects SSTV mode
      - Refreshes the image when it detects the start of transmission
-     - Automatically saves the  image at the end of transmission
+     - Automatically saves the  image when it detects the end of transmission
 <br>
 <br>
-<br>
-3. Signal chain test:
-   1. Test Robot36 app: You can find SSTV transmission audios online and play it over PC/phone and see if the app can decode the image
-   2. You can find 3 PD120 audio recording in this link [yt-pd120-audio-recordings]
-   
-   - this just tests if the App settings are correct.
-     - If the mic permissions are not set, the app will not be able to access the signal
-     - If headset is connect, the may may tryy to get audio from wrong input
+1. Robot36 app test:
+   1. You can play the PD120 SSTV audio recording by John Brier KG4AKV [here][amsat-sstv-page] and test the Robot36 app
+   <br><br>
 
-  3. Full link test: The previous setup just tests the app decoding. If you want to test the whole setup witht the RF link, wou would need another VHF radion/
-     1. Set one radio as the transmitter.
-        1. use the lowerest trasmit power
-        2. Push the PTT and place it close to the SSTV audio output
-     2. Use the Rx radio and android phone to decode the image at a distance
+  1. Full link test: 
+     1. The previous setup just tests the app decoding. If you want to emulate and test the whole signal link, would need another VHF radio
+     2. Set one radio as the transmitter
+         - use the lowest transmit power
+         - push the PTT and place it close to the SSTV audio output
+     3. Use another radio as the receiver and an android phone to decode the image at a distance
 
-Pointers:
-- Make sure that the audio input to the phone does not saturate the signal
+Caution:
+- don't overpower the Rx radio frontend
+- radio's audio output should not saturate the phone's mic input
 
 
 ## Step 3: SSTV reception time
 
+Instructions for the actual ISS reception event.
+
 Quick pre-checks:
+1. Check the status of ISS transmissions before you head out:
+   1. [ARISS SSTV Blogspot][ariss-sstv-blogspot]
+   2. [ARISS current status page][ariss-iss-current-status]
+   3. [AMSAT Live status page][amsat-status]: For SSTV transmissions look under ISS-DATV
+2. Check the weather. It is dangerous to perform outdoor radio activities during a thunderstorms
 
-1. Before you head out check if the ISS SSTV transmision are currently active. You can do this by looking at [AMSAT Live status page][amsat-status]. For SSTV transmissions look under ISS-DATV. Please note that this is from volunteer based reports. If you hover over the numbered cells, you can find the callsign, location and last know reception. This is also a great reference to check the status of other Amateur radio statellites as well.
 
-  <img src="/assets/2023_01_iss_sstv/amsat_status.png" width="100%" />
-
-2. You should also check on [ARISS SSTV Blogspot][ariss-sstv-blogspot] and ARISS current status pages [ariss-iss-current-status] for any reschedules and current status respectively.
-
-3. Check the weather. It is dangerous to head outdoors and point antenna at the sky during thunderstorms
+  <img src="/assets/2023_01_iss_sstv/amsat_status.png" width="80%" id="sstv_sample" class="center" />
 
 SSTV reception
 
-4. The Heavens-above app can provide the orientation of the ISS during the pass. For best signal reception, you need to orient the length of the antenna parallel to the ground and perpendicular to the pass. 
-   - Do not point the tip of the antenna towards the satellite, as the null point (weakest signal reception) is at this orientation, you need to avoid that.
+1. The Heavens-above app can provide the orientation of the ISS during the pass. You can know the position of ISS in the sky as you try to keep the crosshair on the ISS symbol.
+<br>
+<br>
+2. For best signal reception, you need to orient the length of the antenna perpendicular to the pass as shown in the below figure. 
+   - Do not point the tip of the antenna towards the satellite. As the null point (weakest signal reception) is at this orientation, you need to avoid that<br>
+<br>
+  <img id="sstv_sample" src="/assets/2023_01_iss_sstv/antenna_orientation.png" width="100%" class="center" /> <br>
+<br>
+1. I typically use a split screen arrangement between Heaves-above ISS tracking and Robot36 decoding.
 
-> insert the Dec 2020 image and the setup used for reception
+
+This is the first SSTV image I had received using the minimal setup used here. I hope you found this article useful. In the next post I will focus on using directional antenna to improve the signal reception.
+
+  <img src="/assets/2023_01_iss_sstv/ISS_SSTV_20201203.png" width="70%" id="sstv_sample" class="center"  />
 
 
-> Insert image of antenna orientation and phone
-
-
-# Extended Setup
-
-While the basic setup would suffice for SSTV transmission, I wanted to try other ISS radio functions esp the APRS packet repeater. I had build a Yagi antenna.
-
-Advantages
-1. Eleminates external noise: as the audio from the radio is directly fed into the phone
-2. Directional antenna provides higher gain making it possible to receive weak signals.
-3. It is more intuitive to the point the antenna at the satellite :)
-
-Hardware needed
-1. 3 element Yagi antenna
-2. audio interface circuit
-3. Basic setup
-
-> insert image of the setup
-
-> insert block diagram?
-
-# Results
-
-Here I will present a quick setup comparisons and demonstrate the advantage/important of good location 
-
-This is an SSTV reception which happened in Dec-2020. 9V1YP and myself, 9V1DT we both were looking to the receive the sstv reception in Singapore, just 30 KMs apart from different locations. I was on a small hilltop, with a clear horizon view and 9V1YP was on the roof of a car park in an urban setting.
-
-9V1YP's setup is top of the line wheres the other side is mostly homebrew. However, the advantage of having clear line of sight provides a slight edge in receiving the last image.
-
-From the image series, we can see that
-
-# References
-Here are some of the references which I found useful 
 
 
 [ariss-sstv-blogspot]: http://ariss-sstv.blogspot.com/
+[sstv-gallery]: https://www.spaceflightsoftware.com/ARISS_SSTV/index.php
 [amsat-status]: https://www.amsat.org/status/
 [ariss-iss-current-status]: https://www.ariss.org/current-status-of-iss-stations.html
 [ariss]: https://www.ariss.org/
 [heavens-above-web]: https://www.heavens-above.com/
 [heavens-above-app]: https://play.google.com/store/apps/details?id=com.heavens_above.viewer&hl=en&gl=US&pli=1
+[robot36-playstore]: https://play.google.com/store/apps/details?id=xdsopl.robot36&hl=en&gl=US
 [yt-pd120-audio-recordings]: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+[amsat-sstv-page]: https://amsat-uk.org/beginners/iss-sstv/
