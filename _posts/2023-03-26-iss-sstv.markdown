@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "ISS SSTV reception"
+title:  "ISS SSTV reception with minimal setup"
 excerpt: "A guide for receiving SSTV images from ISS using minimal setup: handheld radio and an android phone"
-date:   2023-01-08 19:59:55 +0800
+date:   2023-03-26 19:59:55 +0800
 categories: jekyll update
 ---
 
@@ -209,7 +209,7 @@ Instructions for the actual ISS reception event.
   <img id="sstv_sample" src="/assets/2023_01_iss_sstv/phone_splitscreen.png" width="40%" class="center" /> <br>
 
 
-This is the first SSTV image I had received using the minimal setup used here. I hope you found this article useful. In the next post I will focus on using a directional antenna to improve the signal reception.
+This is the first SSTV image I had received using the minimal setup used here. I hope you found this article useful. In the next post I will focus on using directional antenna to improve the signal reception.
 
   <img src="/assets/2023_01_iss_sstv/ISS_SSTV_20201203.png" width="70%" id="sstv_sample" class="center"  />
 
