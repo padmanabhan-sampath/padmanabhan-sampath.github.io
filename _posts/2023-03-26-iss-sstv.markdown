@@ -37,7 +37,6 @@ How to receive SSTV images form ISS using a very minimal setup:
 
 <figure>
    <img id="sstv_sample" src="/assets/2023_01_iss_sstv/sstv_sample.gif" width="60%" class="center" />
-   <figcaption> SSTV signal decoded by the Robot36 Android app</figcaption>
 </figure>
 
 
