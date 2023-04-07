@@ -10,34 +10,6 @@ categories: jekyll update
 > March 25, 2023 Update: The ISS SSTV system is currently not functional due to a hardware failure. The replacement is scheduled for the summer of 2023. Source: [ARISS SSTV Blogspot][ariss-sstv-blogspot]{:target="_blank"} 
 
 
-<!---
-comments syntax
-[comment]: #  this is a comment
-
-**What are the contributions of this document?**
-
-1. Utilizes a simple hardware setup
-2. Provides detailed practical instructions
-
-**What about existing articles on this topic?**
-
-1. Most online tutorials are bloated, pointing at other resources
-2. No detailed Step by step guide with personal tips + encounters
-
-<p float="centre">
-  <img src="/assets/2023_01_iss_sstv/iss_eareth.png" width="40%" />
-  <img src="/assets/2023_01_iss_sstv/sstv_sameple.gif" width="40%" /> 
-</p>
-
-<figure>
-   <figcaption> </figcaption>
-</figure>
-
---->
-
-
-
-
 
 The [International Space Station (ISS)](https://www.amsat.org/amateur-radio-on-the-iss/){:target="_blank"}  occasionally  uses its onboard amateur radio to transmits images that  can be received by amateur stations on Earth. These images are encoded and transmitted via audio tones using a transmission scheme known as [Slow-scan television (SSTV)](https://en.wikipedia.org/wiki/Slow-scan_television){:target="_blank"} . 
 
