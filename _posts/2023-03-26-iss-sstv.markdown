@@ -24,7 +24,7 @@ You can browse through images received by amateur operators here: [ARISS SSTV ga
 
 It’s an incredible feeling to receive an image directly from a satellite in space that is orbiting Earth at a 400 km altitude. All you need is a handheld VHF radio and an Android phone to receive these images!
 
-How to receive SSTV images form ISS using a very minimal setup:
+How to receive SSTV images from ISS using a very minimal setup:
 
 * TOC
 {:toc}
@@ -56,7 +56,7 @@ How to receive SSTV images form ISS using a very minimal setup:
 
 # **Hardware requirements**
 1. VHF amateur handheld radio with Rubber ducky or whip or a 5/8 antenna
-2. 2.	Android phone with the following apps installed:
+2. Android phone with the following apps installed:
    - [Robot36][robot36-playstore]{:target="_blank"}: For SSTV audio decoding 
    -  [Heavens-Above][heavens-above-app]{:target="_blank"}: To predict the time and location of next ISS pass and for live-tracking
 
