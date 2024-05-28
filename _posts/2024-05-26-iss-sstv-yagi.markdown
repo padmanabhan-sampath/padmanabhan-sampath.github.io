@@ -112,7 +112,7 @@ I built my own variant using telescopic radio antennas - my aim was to create an
 
 Here, I compare the choice of location on the signal reception. Ideally, we want to have a clear line of sight of the satellite, once it appears above the horizon. Even though the satellite symbol pops up in the Heavens-above’s live sky chart, the path should not be blocked by buildings and other terrain, as this leads to poor or no signal reception. Here I compare the signal reception with two similar setups with the key difference being the location. 
 
-Thanks to 91VYP for giving me permission to use his setup and images.
+Thanks to Mr. Chew, call sign 91VYP, for giving me permission to use his setup and images.
 
 | Call sign       | 9V1YP                                                | 9V1DT                            |
 | --------------- | ---------------------------------------------------- | -------------------------------- |
@@ -134,8 +134,8 @@ Thanks to 91VYP for giving me permission to use his setup and images.
 </figure>
 
 
-* Both 9V1YP and I are within the same pass coverage, just about 20 kms apart in Singapore
-* 9V1YP’s reception is from an urban location surrounded by buildings. In contrast, my location was on hill top with clear view of the horizon. This helps to maintain a longer unobstructed radio link to the satellite. This is clearly evident from the 8/12 image reception.
+* Both Chew and I are within the same pass coverage, just about 20 kms apart in Singapore
+* Chew's reception is from an urban location surrounded by buildings. In contrast, my location was on hill top with clear view of the horizon. This helps to maintain a longer unobstructed radio link to the satellite. This is clearly evident from the 8/12 image reception.
 * Identifying a good QTH (location) increases the chances of a strong signal reception. 
 
 > Please note that in thunderstorm prone areas, make sure you have a rain shelter nearby, and avoid operating you radio outdoor during a thunderstorm, as this poses lightening risks.
