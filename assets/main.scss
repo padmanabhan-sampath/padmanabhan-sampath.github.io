@@ -6,30 +6,23 @@
 @import "minima";
 
 /* Publication list */
-.pub-entry {
-    margin-bottom: 1.2em;
-    padding-bottom: 1.2em;
-    border-bottom: 1px solid #e8e8e8;
-}
-.pub-entry:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-}
-.pub-title {
-    display: block;
-    font-weight: 600;
+p.pub-title {
     color: #1756a9;
-    margin-bottom: 0.15em;
-}
-.pub-authors {
-    display: block;
-    color: #555;
-    font-size: 0.93em;
+    font-weight: 600;
     margin-bottom: 0.1em;
 }
-.pub-venue {
-    display: block;
+p.pub-authors {
+    color: #555;
+    font-size: 0.93em;
+    margin-top: 0;
+    margin-bottom: 0.1em;
+}
+p.pub-venue {
     color: #555;
     font-size: 0.93em;
     font-style: italic;
+    margin-top: 0;
+    padding-bottom: 1.2em;
+    margin-bottom: 1.2em;
+    border-bottom: 1px solid #e8e8e8;
 }
