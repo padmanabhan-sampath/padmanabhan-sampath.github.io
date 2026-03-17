@@ -1,12 +1,9 @@
+---
+# Only the main custom styles should be written here.
+# Import partials from `_sass` sub-directory (note: underscore prefix is optional).
+---
 
-figure img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto
-}
-figure figcaption {
-    text-align: center;
-}
+@import "minima";
 
 /* Publication list */
 .pub-entry {
