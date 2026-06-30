@@ -1,0 +1,5 @@
+flowchart LR
+    HT["Your HT<br/>(2 m, APRS)"] -- "uplink 145.825 MHz" --> ISS["ISS APRS<br/>Digipeater (NA1SS)"]
+    ISS -- "digipeated downlink" --> OTHER["Other ground<br/>stations / HTs"]
+    ISS -- "digipeated downlink" --> IGATE["Ground iGate"]
+    IGATE -- "internet" --> APRS["aprs.fi"]
