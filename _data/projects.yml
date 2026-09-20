@@ -1,0 +1,50 @@
+# Projects hub cards (/projects/).
+# Add an entry here and a card appears — no template edits needed.
+#
+#   title:      card heading
+#   url:        where the card links (internal path or full URL)
+#   summary:    one or two lines, scannable, not long-form
+#   image:      optional thumbnail under /assets/...
+#   meta:       optional small label (year, status, stack)
+#   collection: optional collection name — the card shows a live item count
+#               instead of `meta` (used by Teardowns)
+
+- title: Teardowns
+  url: /teardowns/
+  summary: >-
+    Taking hardware apart to see how it was really built — sensor choices,
+    cost-downs, and the design decisions you can only spot from the inside.
+  image: /assets/projects/teardowns.jpg
+  collection: teardowns
+
+- title: Bluetooth APRS TNC
+  url: /2026/06/30/iss-aprs-tnc.html
+  summary: >-
+    A sub-10 USD Bluetooth KISS TNC on an Arduino Nano, built to work the
+    ISS APRS digipeater without a 400 USD handheld.
+  image: /assets/projects/aprs-tnc.jpg
+  meta: 2026 · Arduino · Amateur radio
+
+- title: Indoor Air Quality Sensor
+  url: /2025/10/31/indoor-air-quality-sensor.html
+  summary: >-
+    An ESP32 and SEN66 node feeding CO2, PM and VOC into Home Assistant,
+    with the calibration caveats nobody mentions.
+  image: /assets/projects/iaq-sensor.jpg
+  meta: 2025 · ESP32 · SEN66
+
+- title: ISS SSTV with a Yagi
+  url: /jekyll/update/2024/05/26/iss-sstv-yagi.html
+  summary: >-
+    Building a handheld Yagi-Uda for 2 m and using it to pull cleaner SSTV
+    images off the ISS than a rubber duck ever managed.
+  image: /assets/projects/iss-sstv-yagi.jpg
+  meta: 2024 · Antenna design
+
+- title: ISS SSTV, Minimal Setup
+  url: /jekyll/update/2023/03/26/iss-sstv.html
+  summary: >-
+    Receiving slow-scan TV images from the International Space Station with
+    nothing but a handheld VHF radio and an Android phone.
+  image: /assets/projects/iss-sstv-minimal.jpg
+  meta: 2023 · Amateur radio

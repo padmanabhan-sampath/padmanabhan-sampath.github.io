@@ -34,6 +34,29 @@ theme: minima
 plugins:
   - jekyll-feed
 
+# Top navigation order. Minima lists every page with a title unless this is set,
+# so Teardowns stays out of the nav and is reached via the Projects page.
+header_pages:
+  - projects.html
+  - research.markdown
+  - about.markdown
+
+# Collections
+# Teardowns are their own content type, not blog posts. Each file in _teardowns/
+# becomes /teardowns/<filename>/ — no date prefix on the filename, put the date
+# in the front matter instead.
+collections:
+  teardowns:
+    output: true
+    permalink: /teardowns/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: teardowns
+    values:
+      layout: post
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to

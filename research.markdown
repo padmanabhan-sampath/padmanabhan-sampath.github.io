@@ -18,8 +18,7 @@ Doctoral thesis
 {: .proj-sub}
 
 ![Wi-CMS RF link inside the machine](/assets/research/proj1_wicms_link.png)
-*Wireless Condition Monitoring System (Wi-CMS) Overview.*
-
+*Wireless Condition Monitoring System (Wi-CMS) overview.*
 ![Rotor-mounted wireless sensor node](/assets/research/proj1_rts.png)
 *Rotor Telemetry System mounted onto the BLSG machine.*
 ![Results comparison](/assets/research/proj1_results.png)
@@ -37,16 +36,11 @@ I proposed a Wireless Condition Monitoring System (Wi-CMS) that places wireless 
 Infrared thermopile and Hall-effect arrays for inter-turn fault detection
 {: .proj-sub}
 
-
-
-
 ![End-winding thermal and magnetic sensor array](/assets/research/proj2_endwinding_array.png)
-*Circular sensor array facing the end-winding region and the spatial fault map it produces.*
-
-
-![Spatial fault map from the array](/assets/research/proj2_fault_map_thermal.png)
+*Circular sensor array facing the end-winding region.*
+![Thermal fault map from the array](/assets/research/proj2_fault_map_thermal.png)
 *Thermal camera view vs end-winding temperature distribution during a stator inter-turn fault.*
-![Spatial fault map from the array](/assets/research/proj2_fault_map_hall.png)
+![Magnetic fault map from the array](/assets/research/proj2_fault_map_hall.png)
 *Spatial magnetic flux deviation: healthy vs stator inter-turn fault.*
 {: .proj-figs-left}
 
@@ -57,6 +51,7 @@ I proposed two circular sensing arrays mounted along the inner wall of the stato
 
 
 ---
+{: .clear}
 # Publications
 
 ### PhD Thesis

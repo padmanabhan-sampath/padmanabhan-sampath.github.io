@@ -1,0 +1,28 @@
+---
+layout: page
+title: Projects
+permalink: /projects/
+---
+
+<div class="project-grid">
+  {%- for project in site.data.projects -%}
+  <a class="project-card" href="{{ project.url | relative_url }}">
+    {%- if project.image %}
+    <img class="project-card-img" src="{{ project.image | relative_url }}" alt="{{ project.title | escape }}" loading="lazy" />
+    {%- else %}
+    <div class="project-card-img project-card-img--empty" aria-hidden="true"></div>
+    {%- endif %}
+    <div class="project-card-body">
+      <h3>{{ project.title | escape }}</h3>
+      <p>{{ project.summary | strip_newlines }}</p>
+      {%- if project.collection -%}
+        {%- assign coll = site.collections | where: "label", project.collection | first -%}
+        {%- assign count = coll.docs | size -%}
+        <span class="project-meta">{{ count }} {% if count == 1 %}write-up{% else %}write-ups{% endif %}</span>
+      {%- elsif project.meta -%}
+        <span class="project-meta">{{ project.meta }}</span>
+      {%- endif -%}
+    </div>
+  </a>
+  {%- endfor -%}
+</div>

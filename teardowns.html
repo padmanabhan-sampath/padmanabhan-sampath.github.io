@@ -1,0 +1,40 @@
+---
+layout: page
+title: Teardowns
+permalink: /teardowns/
+---
+
+<p class="page-intro">
+  A product's bill of materials is an argument about what mattered to the people
+  who built it. These teardowns are me reading that argument — which sensors they
+  picked and why, where the cost went, and what I'd have done differently.
+</p>
+
+{%- assign teardowns = site.teardowns | sort: "date" | reverse -%}
+{%- if teardowns.size == 0 -%}
+<p class="page-intro"><em>First teardown in progress — check back shortly.</em></p>
+{%- else -%}
+<ul class="teardown-list">
+  {%- for item in teardowns -%}
+  <li>
+    <a class="teardown-thumb" href="{{ item.url | relative_url }}">
+      {%- if item.thumbnail %}
+      <img src="{{ item.thumbnail | relative_url }}" alt="{{ item.title | escape }}" loading="lazy" />
+      {%- else %}
+      <span class="teardown-thumb--empty" aria-hidden="true"></span>
+      {%- endif %}
+    </a>
+    <div class="teardown-body">
+      <h3><a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a></h3>
+      <span class="teardown-meta">
+        {{ item.date | date: "%b %-d, %Y" }}
+        {%- if item.device %} &middot; {{ item.device | escape }}{% endif -%}
+      </span>
+      <p>{{ item.summary | default: item.excerpt | strip_html | strip_newlines | truncate: 220 }}</p>
+    </div>
+  </li>
+  {%- endfor -%}
+</ul>
+{%- endif -%}
+
+<p class="page-intro back-link"><a href="{{ '/projects/' | relative_url }}">&larr; All projects</a></p>
