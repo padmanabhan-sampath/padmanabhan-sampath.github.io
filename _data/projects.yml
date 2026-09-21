@@ -37,19 +37,3 @@
     An ESP32 and SEN66 node feeding CO2, PM and VOC into Home Assistant.
   image: /assets/projects/iaq-sensor.jpg
   meta: 2025 · ESP32 · SEN66
-
-- title: ISS SSTV with a Yagi
-  url: /jekyll/update/2024/05/26/iss-sstv-yagi.html
-  summary: >-
-    Building a handheld Yagi-Uda for 2 m and using it to pull cleaner SSTV
-    images off the ISS.
-  image: /assets/projects/iss-sstv-yagi.jpg
-  meta: 2024 · Antenna design
-
-- title: ISS SSTV, Minimal Setup
-  url: /jekyll/update/2023/03/26/iss-sstv.html
-  summary: >-
-    Receiving slow-scan TV images from the International Space Station with
-    a handheld VHF radio and an Android phone.
-  image: /assets/projects/iss-sstv-minimal.jpg
-  meta: 2023 · Amateur radio
