@@ -3,8 +3,7 @@ title: "Teardown: Meisei iMS-100 eco GPS radiosonde"
 date: 2026-09-20
 device: "Meisei iMS-100 eco"
 summary: >-
-  A recovered Singapore weather-balloon radiosonde, traced part by part to work
-  out what each block actually does.
+  A recovered Singapore weather-balloon radiosonde, traced part by part to work out what each block actually does.
 thumbnail: /assets/teardowns/radiosonde/unit.jpg
 tags: [radiosonde, amateur-radio, sensors, RF, teardown]
 ---
